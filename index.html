@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MiraTech Industries - Forward-thinking technology solution provider specializing in AI, automation, and digital transformation.">
+    <title>MiraTech Industries - Intelligent Systems & Scalable Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-grid"></div>
+        <div class="loading-gradient"></div>
+        <div class="loading-content">
+            <div class="loading-logo-container">
+                <div class="loading-logo-glow"></div>
+                <div class="loading-logo-border">
+                    <svg class="logo-icon" viewBox="0 0 100 100" fill="none">
+                        <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="2" opacity="0.3"/>
+                        <circle cx="50" cy="50" r="30" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+                        <circle cx="50" cy="50" r="20" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+                        <path d="M50 20 L55 45 L80 50 L55 55 L50 80 L45 55 L20 50 L45 45 Z" fill="currentColor" opacity="0.8"/>
+                        <circle cx="50" cy="50" r="5" fill="currentColor"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="loading-text">
+                <h1 class="loading-title">MIRATECH</h1>
+                <p class="loading-subtitle">Initializing Systems</p>
+                <div class="loading-bar-container">
+                    <div id="loading-bar" class="loading-bar"></div>
+                </div>
+                <div class="loading-status">
+                    <span>Core.Status: Active</span>
+                    <span id="loading-percent">0%</span>
+                </div>
+            </div>
+        </div>
+        <div class="loading-corner loading-corner-tl"></div>
+        <div class="loading-corner loading-corner-tr"></div>
+        <div class="loading-corner loading-corner-bl"></div>
+        <div class="loading-corner loading-corner-br"></div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress" class="scroll-progress"></div>
+
+    <!-- Side Progress Indicator -->
+    <div class="side-progress">
+        <div class="side-progress-line">
+            <div id="side-progress-fill" class="side-progress-fill"></div>
+        </div>
+        <div id="side-nav" class="side-nav"></div>
+        <div class="side-progress-line"></div>
+    </div>
+
+    <!-- Dynamic Background -->
+    <div id="background-container" class="background-container">
+        <video id="bg-video" class="bg-video" muted playsinline preload="auto">
+            <source src="https://cdn.pixabay.com/video/2021/09/25/89914-623867623_large.mp4" type="video/mp4">
+        </video>
+        <div class="bg-overlay"></div>
+        <div class="bg-gradient-top"></div>
+        <div class="bg-gradient-bottom"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <button class="logo-button" onclick="scrollToSection('home')">
+                    <div class="logo-wrapper">
+                        <div class="logo-glow"></div>
+                        <svg class="logo-svg" viewBox="0 0 100 100" fill="none">
+                            <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="2" opacity="0.3"/>
+                            <circle cx="50" cy="50" r="30" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+                            <circle cx="50" cy="50" r="20" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+                            <path d="M50 20 L55 45 L80 50 L55 55 L50 80 L45 55 L20 50 L45 45 Z" fill="currentColor" opacity="0.8"/>
+                            <circle cx="50" cy="50" r="5" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <h1 class="logo-title">
+                            <span class="logo-mira">MIRA</span>
+                            <span class="logo-tech">TECH</span>
+                        </h1>
+                        <span class="logo-subtitle">INDUSTRIES</span>
+                        <div class="logo-line"></div>
+                        <span class="logo-tagline">INNOVATION • INTEGRITY • IMPACT</span>
+                    </div>
+                </button>
+                
+                <nav class="nav">
+                    <button class="nav-item" data-section="ecosystem">ecosystem</button>
+                    <button class="nav-item" data-section="innovation">innovation</button>
+                    <button class="nav-item" data-section="founder">founder</button>
+                    <button class="nav-item" data-section="culture">culture</button>
+                    <button class="nav-item" data-section="heritage">heritage</button>
+                    <button class="nav-item" data-section="about">about</button>
+                    <button class="nav-item" data-section="contact">contact</button>
+                </nav>
+                
+                <button class="inquire-btn" onclick="scrollToSection('contact')">Inquire</button>
+            </div>
+        </header>
+
+        <!-- Hero Overlay -->
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <div class="hero-line"></div>
+                <p class="hero-hint">Scrolling Initiates Sequence</p>
+                <svg class="hero-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 9l6 6 6-6"/>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Sections -->
+        <section id="home" class="content-section" data-section="home">
+            <div class="section-content">
+                <div class="section-icon-wrapper">
+                    <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="4" y="4" width="16" height="16" rx="2"/>
+                        <rect x="9" y="9" width="6" height="6"/>
+                        <line x1="9" y1="1" x2="9" y2="4"/>
+                        <line x1="15" y1="1" x2="15" y2="4"/>
+                        <line x1="9" y1="20" x2="9" y2="23"/>
+                        <line x1="15" y1="20" x2="15" y2="23"/>
+                        <line x1="20" y1="9" x2="23" y2="9"/>
+                        <line x1="20" y1="14" x2="23" y2="14"/>
+                        <line x1="1" y1="9" x2="4" y2="9"/>
+                        <line x1="1" y1="14" x2="4" y2="14"/>
+                    </svg>
+                </div>
+                <h2 class="section-title">MiraTech Industries</h2>
+                <h3 class="section-subtitle">Intelligent Systems & Scalable Solutions</h3>
+                <p class="section-text">A forward-thinking, multi-sector enterprise driven by innovation, intelligent systems, and scalable digital transformation. We optimize how modern businesses operate through deep-tech integration.</p>
+                <button class="section-btn" data-next="ecosystem">Explore Phase 1<span class="btn-dot"></span></button>
+            </div>
+        </section>
+
+        <section id="ecosystem" class="content-section" data-section="ecosystem">
+            <div class="section-content">
+                <div class="section-icon-wrapper">
+                    <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                    </svg>
+                </div>
+                <h2 class="section-title">Digital Ecosystems</h2>
+                <h3 class="section-subtitle">AI-Integrated Architecture</h3>
+                <p class="section-text">Building robust digital ecosystems that integrate artificial intelligence, data-driven decision systems, and process automation to enhance global efficiency.</p>
+                <button class="section-btn" data-next="innovation">Explore Phase 2<span class="btn-dot"></span></button>
+            </div>
+        </section>
+
+        <section id="innovation" class="content-section" data-section="innovation">
+            <div class="section-content">
+                <div class="section-icon-wrapper">
+                    <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="2" y1="12" x2="22" y2="12"/>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    </svg>
+                </div>
+                <h2 class="section-title">Innovation Hub</h2>
+                <h3 class="section-subtitle">Diversified Operations</h3>
+                <p class="section-text">From logistics optimization to smart business infrastructure, we transform conventional processes into intelligent, adaptive systems.</p>
+                <button class="section-btn" data-next="founder">Explore Phase 3<span class="btn-dot"></span></button>
+            </div>
+        </section>
+
+        <section id="founder" class="content-section" data-section="founder">
+            <div class="section-content">
+                <div class="section-icon-wrapper">
+                    <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                </div>
+                <h2 class="section-title">Vision & Heritage</h2>
+                <h3 class="section-subtitle">Founder: Vuyo Neville Mazibuko</h3>
+                <p class="section-text">Proudly emerging from Eswatini, founder Vuyo Neville Mazibuko brings a unique perspective to global innovation, building MiraTech on the pillars of integrity and future-ready engineering.</p>
+                <button class="section-btn" data-next="culture">Explore Phase 4<span class="btn-dot"></span></button>
+            </div>
+        </section>
+
+        <section id="culture" class="content-section" data-section="culture">
+            <div class="section-content">
+                <div class="section-icon-wrapper">
+                    <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                    </svg>
+                </div>
+                <h2 class="section-title">Culture & Values</h2>
+                <h3 class="section-subtitle">The Three Pillars</h3>
+                <p class="section-text">Our culture is defined by Innovation, Integrity, and Impact. We foster an environment of radical transparency and creative freedom, where every engineer is empowered to challenge the status quo.</p>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h4 class="feature-title">Innovation</h4>
+                        <p class="feature-desc">Pushing boundaries daily.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4 class="feature-title">Integrity</h4>
+                        <p class="feature-desc">Honesty in every line of code.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4 class="feature-title">Impact</h4>
+                        <p class="feature-desc">Solving real-world problems.</p>
+                    </div>
+                </div>
+                <button class="section-btn" data-next="heritage">Explore Phase 5<span class="btn-dot"></span></button>
+            </div>
+        </section>
+
+        <section id="heritage" class="content-section" data-section="heritage">
+            <div class="section-content">
+                <div class="section-icon-wrapper">
+                    <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                </div>
+                <h2 class="section-title">Eswatini Roots</h2>
+                <h3 class="section-subtitle">Global Vision, Local Soul</h3>
+                <p class="section-text">The Eswatini heritage of our founder infuses MiraTech with a spirit of resilience and community. It drives our vision to create technology that doesn't just serve businesses, but elevates humans globally.</p>
+                <button class="section-btn" data-next="about">Explore Phase 6<span class="btn-dot"></span></button>
+            </div>
+        </section>
+
+        <section id="about" class="content-section" data-section="about">
+            <div class="section-content">
+                <div class="section-icon-wrapper">
+                    <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                </div>
+                <h2 class="section-title">Strategic Mission</h2>
+                <h3 class="section-subtitle">Sustainable & Future-Oriented</h3>
+                <p class="section-text">Bridging the gap between technology and real-world application, delivering systems that are not only efficient but also adaptive to global technological shifts.</p>
+                <button class="section-btn" data-next="contact">Explore Phase 7<span class="btn-dot"></span></button>
+            </div>
+        </section>
+
+        <section id="contact" class="content-section" data-section="contact">
+            <div class="section-content">
+                <div class="section-icon-wrapper">
+                    <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                </div>
+                <h2 class="section-title">Transform Today</h2>
+                <h3 class="section-subtitle">Connect With Our Team</h3>
+                <p class="section-text">Ready to scale your digital infrastructure? Join us in building the next generation of intelligent systems.</p>
+                <div class="contact-form">
+                    <div class="form-accent"></div>
+                    <form id="inquiry-form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-input" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Location</label>
+                                <input type="text" class="form-input" placeholder="Eswatini, South Africa, etc.">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Inquiry Type</label>
+                            <select class="form-input form-select">
+                                <option>Architecture Transformation</option>
+                                <option>Ecosystem Integration</option>
+                                <option>Innovation Consulting</option>
+                                <option>Strategic Partnership</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-input form-textarea" placeholder="Describe your vision..."></textarea>
+                        </div>
+                        <button type="submit" class="form-submit">Initialize Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-accent"></div>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="footer-logo-wrapper">
+                        <svg class="footer-logo-svg" viewBox="0 0 100 100" fill="none">
+                            <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="2" opacity="0.3"/>
+                            <circle cx="50" cy="50" r="30" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+                            <circle cx="50" cy="50" r="20" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+                            <path d="M50 20 L55 45 L80 50 L55 55 L50 80 L45 55 L20 50 L45 45 Z" fill="currentColor" opacity="0.8"/>
+                            <circle cx="50" cy="50" r="5" fill="currentColor"/>
+                        </svg>
+                        <div class="footer-logo-glow"></div>
+                    </div>
+                    <h3 class="footer-title">
+                        <span class="footer-mira">MIRA</span>
+                        <span class="footer-tech">TECH</span>
+                    </h3>
+                    <span class="footer-subtitle">INDUSTRIES</span>
+                    <div class="footer-tagline">ESWATINI • GLOBAL INNOVATION • 2026</div>
+                </div>
+                
+                <div class="footer-info">
+                    <div class="footer-info-item">
+                        <h4 class="footer-info-title">Founder</h4>
+                        <p class="footer-info-text">Vuyo Neville Mazibuko</p>
+                        <p class="footer-info-italic">Building bridges through technology.</p>
+                    </div>
+                    <div class="footer-info-item">
+                        <h4 class="footer-info-title">Values</h4>
+                        <p class="footer-info-text">Innovation, Integrity, Impact</p>
+                    </div>
+                    <div class="footer-info-item">
+                        <h4 class="footer-info-title">Presence</h4>
+                        <p class="footer-info-text">Eswatini (HQ) • Global Systems</p>
+                    </div>
+                </div>
+
+                <div class="footer-social">
+                    <a href="https://linkedin.com/company/miratech-industries" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        <span class="social-label">LinkedIn</span>
+                    </a>
+                    <a href="https://x.com/miratech_ind" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                        <span class="social-label">X / Twitter</span>
+                    </a>
+                    <a href="https://github.com/miratech-industries" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        <span class="social-label">GitHub</span>
+                    </a>
+                    <a href="https://medium.com/@miratech" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
+                        </svg>
+                        <span class="social-label">Medium</span>
+                    </a>
+                </div>
+
+                <div class="footer-copyright">
+                    &copy; MiraTech Industries. Engineered for the future.
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Chat Assistant -->
+    <div id="chat-container" class="chat-container">
+        <div id="chat-window" class="chat-window">
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <div class="chat-avatar">
+                        <div class="chat-avatar-inner">
+                            <svg class="chat-bot-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z"/>
+                                <circle cx="9" cy="13" r="1"/>
+                                <circle cx="15" cy="13" r="1"/>
+                            </svg>
+                        </div>
+                        <div class="chat-status-dot"></div>
+                    </div>
+                    <div class="chat-header-text">
+                        <h4 class="chat-title">MiraTech Assistant</h4>
+                        <p class="chat-status">Online</p>
+                    </div>
+                </div>
+                <div class="chat-header-actions">
+                    <button class="chat-action-btn" onclick="minimizeChat()">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"/>
+                        </svg>
+                    </button>
+                    <button class="chat-action-btn" onclick="toggleChat()">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"/>
+                            <line x1="6" y1="6" x2="18" y2="18"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="chat-messages" class="chat-messages">
+                <div class="chat-message chat-message-model">
+                    <div class="chat-message-bubble">Welcome to MiraTech Industries. I am your AI assistant. How can I help you transform your vision today?</div>
+                </div>
+            </div>
+            <div class="chat-input-container">
+                <input type="text" id="chat-input" class="chat-input" placeholder="Ask about our innovation...">
+                <button id="chat-send" class="chat-send-btn" onclick="sendChatMessage()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"/>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                    </svg>
+                </button>
+            </div>
+            <p class="chat-footer">Powered by MiraTech Intelligent Core</p>
+        </div>
+        
+        <button id="chat-toggle" class="chat-toggle" onclick="toggleChat()">
+            <div class="chat-toggle-glow"></div>
+            <svg class="chat-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+            <div id="chat-minimized-dot" class="chat-minimized-dot hidden"></div>
+        </button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
